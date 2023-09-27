@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            background-color: aquamarine;
+            border-radius: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        #nav-bar{
+            background-color: aqua;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius:  32px;
+            background-color: bisque;
+        }
+        #output {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <button id="nav-bar"><a href="#">Home</a></button>
+        </ul>
+    </nav>
+    <h1>Array Method</h1>
+    
+    <button id="arrayLengthButton">Array Length</button>
+    <br>
+    <span id="arrayLengthOutput"></span>
+    
+    <button id="arrayToStringButton">Array toString()</button>
+    <br>
+    <span id="arrayToStringOutput"></span>
+    
+    <button id="arrayPopButton">Array pop()</button>
+    <br>
+    <span id="arrayPopOutput"></span>
+
+    <script>
+        var myArray = ["apple", "banana", "cherry", "date"];
+
+        document.getElementById("arrayLengthButton").addEventListener("click", function () {
+            var arrayLength = myArray.length;
+            document.getElementById("arrayLengthOutput").innerHTML = "Array Length: " + arrayLength;
+        });
+
+        document.getElementById("arrayToStringButton").addEventListener("click", function () {
+            var arrayAsString = myArray.toString();
+            document.getElementById("arrayToStringOutput").innerHTML = "Array as String: " + arrayAsString;
+        });
+
+        document.getElementById("arrayPopButton").addEventListener("click", function () {
+            var poppedElement = myArray.pop();
+            document.getElementById("arrayPopOutput").innerHTML = "Popped Element: " + poppedElement;
+        });
+    </script>
+</body>
+</html>
